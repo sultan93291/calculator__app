@@ -21,33 +21,33 @@ p {
 a {
   text-decoration: none;
 }
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   height: 0;
   width: 0;
 }
 .container {
-  height: 600px;
-  max-width: 450px;
+  height: 570px;
+  max-width: 350px;
   margin: 150px auto;
-  padding-top: 20px;
+  padding-top: 15px;
   background-color: rgba(0, 0, 0, 0.7);
   border-radius: 25px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 .display {
   height: 70px;
-  max-width: 410px;
+  max-width: 330px;
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 25px;
   margin: 0 auto;
   font-size: 30px;
   padding: 20px 30px;
-  overflow-x:auto ;
+  overflow-x: auto;
   white-space: nowrap;
 }
 .digits {
-  height: 430px;
-  max-width: 410px;
+  height: 380px;
+  max-width: 340px;
   margin: 0 auto;
   margin-top: 50px;
   border-radius: 5px;
@@ -56,39 +56,64 @@ a {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 15px;
+  column-gap: 10px;
+  row-gap: 10px;
+  position: relative;
 }
 
 .dgt_btn {
-  height: 80px;
+  height: 60px;
   width: 60px;
   background-color: #000;
-  border-radius: 5px;
+  border-radius: 50%;
   color: #fff;
   border: 0.5px solid transparent;
   font-size: 25px;
   font-weight: bold;
 }
-.dgt_btn:last-child {
-  width: 120px;
-  background-color: rgba(0, 0, 255, 0.62);
+.light {
+  height: 60px;
+  width: 130px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 5px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 5px 0;
 }
-.dgt_btn:first-child {
-  background-color: green;
+
+.light div {
+  height: 100%;
+  width: 1px;
+  background-color: #fff;
+  opacity: 0.5;
 }
-.dgt_btn:nth-child(18) {
+
+#del {
+  font-size: 18px;
   background-color: red;
+}
+#clear {
+  font-size: 18px;
+  background-color: rgba(0, 128, 0, 0.539);
+}
+#ans {
+  width: 120px;
+  border-radius: 25px;
+  margin-left: 180px;
 }
 
 @media (max-width: 420px) {
   .container {
-  height: auto;
-  padding-bottom: 60px;
+    width: 330px;
+    height: auto;
+    padding-bottom: 60px;
   }
-  .display{
+  .display {
     margin: 0 20px;
   }
   .dgt_btn:last-child {
-  width: 135px;
-}
+    width: 135px;
+  }
 }
